@@ -15,7 +15,6 @@ body span {
   font-weight: 400;
   line-height: 1; }
 
-/* LAYOUT */
 /* HEADER */
 header {
   height: 140px;
@@ -70,18 +69,22 @@ header {
 /* MAIN */
 main {
   padding: 32px 0 178px;
-  background: #f2f4f7; }
-  main .on_air a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; }
-    main .on_air a span {
-      font-size: 19px; }
-    main .on_air a span:first-of-type {
-      font-size: 22px;
-      color: red;
-      font-weight: 500; }
+  background: #f2f4f7;
+  /* 여기까지 fun_contents */
+  /*여기까지  popular_contents */ }
+  main .on_air {
+    margin-bottom: 23px; }
+    main .on_air a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto; }
+      main .on_air a span {
+        font-size: 19px; }
+      main .on_air a span:first-of-type {
+        font-size: 22px;
+        color: red;
+        font-weight: 500; }
   main form {
     position: relative;
     width: 910px;
@@ -107,24 +110,29 @@ main {
   main .fun_contents,
   main .popular_contents {
     float: left; }
-  main .fun_contents ul {
-    margin-top: 50px;
-    width: 863px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end; }
-    main .fun_contents ul li {
-      display: inline-block;
-      width: 200px;
-      height: 163px;
-      border-radius: 8px;
-      box-shadow: 1px 9px 16px -9px rgba(0, 0, 0, 0.5);
-      background: #fff;
-      margin-right: 18px;
-      margin-bottom: 13px; }
-      main .fun_contents ul li:nth-child(4n), main .fun_contents ul li:last-child {
-        margin-right: 0; }
-      main .fun_contents ul li a {
+  main .fun_contents {
+    position: relative;
+    /* 여기까지 fun_contents > ul */ }
+    main .fun_contents ul {
+      margin-top: 50px;
+      width: 863px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end; }
+      main .fun_contents ul li {
+        display: inline-block;
+        width: 200px;
+        height: 163px;
+        border-radius: 8px;
+        box-shadow: 1px 9px 16px -9px rgba(0, 0, 0, 0.5);
+        background: #fff;
+        margin-right: 18px;
+        margin-bottom: 13px;
+        position: relative;
+        overflow: hidden; }
+        main .fun_contents ul li:nth-child(4n), main .fun_contents ul li:last-child {
+          margin-right: 0; }
+      main .fun_contents ul a {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -133,63 +141,130 @@ main {
         width: 100%;
         height: 100%;
         text-align: center; }
-    main .fun_contents ul .fun_logo {
-      background: url(../images/ebs_main_spt1.png) no-repeat;
-      margin-bottom: 32px; }
-    main .fun_contents ul li:nth-child(1) a .fun_logo {
-      background-position: 0 -125px;
-      width: 163px;
-      height: 23px; }
-    main .fun_contents ul li:nth-child(1):hover a .fun_logo {
-      background-position: -180px -125px; }
-    main .fun_contents ul li:nth-of-type(2) a .fun_logo {
-      background-position: -147px -24px;
-      width: 112px;
-      height: 31px; }
-    main .fun_contents ul li:nth-child(2):hover a .fun_logo {
-      background-position: -147px -80px; }
-    main .fun_contents ul li:nth-child(3) a .fun_logo {
-      background-position: -273px -24px;
-      width: 136px;
-      height: 42px; }
-    main .fun_contents ul li:nth-child(3):hover a .fun_logo {
-      background-position: -273px -75px; }
-    main .fun_contents ul li:nth-child(4) a .fun_logo {
-      background-position: -427px -24px;
-      width: 145px;
-      height: 39px; }
-    main .fun_contents ul li:nth-child(4):hover a .fun_logo {
-      background-position: -427px -86px; }
-    main .fun_contents ul li:nth-child(5) a .fun_logo {
-      background-position: 0 -163px;
-      width: 103px;
-      height: 53px; }
-    main .fun_contents ul li:nth-child(5):hover a .fun_logo {
-      background-position: 0 -219px; }
-    main .fun_contents ul li:nth-child(6) a .fun_logo {
-      background-position: -180px -176px;
-      width: 125px;
-      height: 39px; }
-    main .fun_contents ul li:nth-child(6):hover a .fun_logo {
-      background-position: -180px -232px; }
-    main .fun_contents ul li:nth-child(7) a .fun_logo {
-      background-position: -345px -176px;
-      width: 84px;
-      height: 40px; }
-    main .fun_contents ul li:nth-child(7):hover a .fun_logo {
-      background-position: -345px -232px; }
-    main .fun_contents ul li:nth-child(8) a .fun_logo {
-      background-position: -490px -171px;
-      width: 70px;
-      height: 42px; }
-    main .fun_contents ul li:nth-child(8):hover a .fun_logo {
-      background-position: -490px -238px; }
-    main .fun_contents ul li:nth-child(9) a .fun_logo {
-      background-position: 0 -315px;
-      width: 103px;
-      height: 43px; }
-    main .fun_contents ul li:nth-child(9):hover a .fun_logo {
-      background-position: 0 -387px; }
+        main .fun_contents ul a span {
+          z-index: 3;
+          transition: 0.2s; }
+        main .fun_contents ul a:hover span {
+          color: #fff; }
+        main .fun_contents ul a:hover:after {
+          opacity: 1; }
+        main .fun_contents ul a:after {
+          position: absolute;
+          opacity: 0;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 200%;
+          height: 100%;
+          background: linear-gradient(-45deg, #8865b8, #8865b8, #3c98c9, #3cc97b, #3cc97b);
+          animation: moveBg 3s ease-in-out infinite;
+          transition: 0.2s; }
+
+@keyframes moveBg {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(-50%); }
+  100% {
+    transform: translateX(0); } }
+      main .fun_contents ul .fun_logo {
+        background: url(../images/ebs_main_spt1.png) no-repeat;
+        margin-bottom: 32px;
+        z-index: 3; }
+      main .fun_contents ul li:nth-child(1) a .fun_logo {
+        background-position: 0 -125px;
+        width: 163px;
+        height: 23px; }
+      main .fun_contents ul li:nth-child(1):hover a .fun_logo {
+        background-position: -180px -125px; }
+      main .fun_contents ul li:nth-of-type(2) a .fun_logo {
+        background-position: -147px -24px;
+        width: 112px;
+        height: 31px; }
+      main .fun_contents ul li:nth-child(2):hover a .fun_logo {
+        background-position: -147px -80px; }
+      main .fun_contents ul li:nth-child(3) a .fun_logo {
+        background-position: -273px -24px;
+        width: 136px;
+        height: 42px; }
+      main .fun_contents ul li:nth-child(3):hover a .fun_logo {
+        background-position: -273px -75px; }
+      main .fun_contents ul li:nth-child(4) a .fun_logo {
+        background-position: -427px -24px;
+        width: 145px;
+        height: 39px; }
+      main .fun_contents ul li:nth-child(4):hover a .fun_logo {
+        background-position: -427px -86px; }
+      main .fun_contents ul li:nth-child(5) a .fun_logo {
+        background-position: 0 -163px;
+        width: 103px;
+        height: 53px; }
+      main .fun_contents ul li:nth-child(5):hover a .fun_logo {
+        background-position: 0 -219px; }
+      main .fun_contents ul li:nth-child(6) a .fun_logo {
+        background-position: -180px -176px;
+        width: 125px;
+        height: 39px; }
+      main .fun_contents ul li:nth-child(6):hover a .fun_logo {
+        background-position: -180px -232px; }
+      main .fun_contents ul li:nth-child(7) a .fun_logo {
+        background-position: -345px -176px;
+        width: 88px;
+        height: 40px; }
+      main .fun_contents ul li:nth-child(7):hover a .fun_logo {
+        background-position: -345px -234px; }
+      main .fun_contents ul li:nth-child(8) a .fun_logo {
+        background-position: -490px -171px;
+        width: 70px;
+        height: 42px; }
+      main .fun_contents ul li:nth-child(8):hover a .fun_logo {
+        background-position: -490px -238px; }
+      main .fun_contents ul li:nth-child(9) a .fun_logo {
+        background-position: 0 -315px;
+        width: 103px;
+        height: 43px; }
+      main .fun_contents ul li:nth-child(9):hover a .fun_logo {
+        background-position: 0 -387px; }
+    main .fun_contents .bx-wrapper {
+      max-width: 641px !important;
+      height: 162px !important;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-radius: 15px;
+      overflow: hidden; }
+      main .fun_contents .bx-wrapper .bx-controls-direction {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%; }
+        main .fun_contents .bx-wrapper .bx-controls-direction .bx-prev {
+          left: 0; }
+        main .fun_contents .bx-wrapper .bx-controls-direction .bx-next {
+          position: absolute;
+          right: 0; }
+      main .fun_contents .bx-wrapper .bx-pager {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align-last: center; }
+        main .fun_contents .bx-wrapper .bx-pager div {
+          display: inline-block; }
+    main .fun_contents .fun_slide .bx_s {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 641px; }
+      main .fun_contents .fun_slide .bx_s .text_box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 50px 0 0 34px;
+        box-sizing: border-box; }
   main .popular_contents {
     margin-top: 50px; }
     main .popular_contents ul {
@@ -200,8 +275,17 @@ main {
         height: 80px;
         border-radius: 8px;
         box-shadow: 1px 9px 16px -9px rgba(0, 0, 0, 0.5);
+        box-shadow: none;
         background: #fff;
-        display: inline-block; }
+        display: inline-block;
+        margin-bottom: 8px;
+        margin-right: 2px;
+        transition: 0.2s; }
+        main .popular_contents ul li:hover {
+          box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+          background-color: #4d82bf; }
+          main .popular_contents ul li:hover span {
+            color: #fff; }
         main .popular_contents ul li a {
           display: block;
           width: 100%;

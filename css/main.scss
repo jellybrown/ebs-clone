@@ -45,7 +45,6 @@ body {
     }
 }
 
-/* LAYOUT */
 
 /* HEADER */
 header {
@@ -127,6 +126,7 @@ main {
     background: #f2f4f7;
 
     .on_air {
+        margin-bottom: 23px;
 
         a {
 
@@ -178,6 +178,8 @@ main {
     }
 
     .fun_contents {
+        position: relative;
+
         ul {
             margin-top: 50px;
             width: 863px;
@@ -193,30 +195,79 @@ main {
                 background: #fff;
                 margin-right: 18px;
                 margin-bottom: 13px;
+                position: relative;
+                overflow: hidden;
 
                 &:nth-child(4n),
                 &:last-child {
                     margin-right: 0;
                 }
 
-                a {
-                    @include flex-center;
 
-                    flex-direction: column;
-                    width: 100%;
+            }
+
+
+
+            a {
+                @include flex-center;
+
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+
+                span {
+                    z-index: 3;
+                    transition: 0.2s;
+                }
+
+                &:hover span {
+                    color: #fff;
+                }
+
+                &:hover:after {
+                    opacity: 1;
+                }
+
+                &:after {
+                    position: absolute;
+                    opacity: 0;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 200%;
                     height: 100%;
-                    text-align: center;
+                    background: linear-gradient(-45deg, #8865b8, #8865b8, #3c98c9, #3cc97b, #3cc97b);
+                    animation: moveBg 3s ease-in-out infinite;
+                    transition: 0.2s;
 
+
+                    @keyframes moveBg {
+                        0% {
+                            transform: translateX(0);
+                        }
+
+                        50% {
+                            transform: translateX(-50%);
+                        }
+
+                        100% {
+                            transform: translateX(0);
+                        }
+
+                    }
                 }
             }
+
 
             .fun_logo {
                 background: url(../images/ebs_main_spt1.png) no-repeat;
                 margin-bottom: 32px;
+                z-index: 3;
+
             }
 
             li:nth-child(1) a .fun_logo {
-
                 background-position: 0 -125px;
                 width: 163px;
                 height: 23px;
@@ -280,12 +331,12 @@ main {
 
             li:nth-child(7) a .fun_logo {
                 background-position: -345px -176px;
-                width: 84px;
+                width: 88px;
                 height: 40px;
             }
 
             li:nth-child(7):hover a .fun_logo {
-                background-position: -345px -232px;
+                background-position: -345px -234px;
             }
 
             li:nth-child(8) a .fun_logo {
@@ -308,7 +359,72 @@ main {
                 background-position: 0 -387px;
             }
         }
+
+        /* 여기까지 fun_contents > ul */
+
+        .bx-wrapper {
+            max-width: 641px !important;
+            height: 162px !important;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border-radius: 15px;
+            overflow: hidden;
+
+            .bx-controls-direction {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+
+                .bx-prev {
+                    left: 0;
+                }
+
+                .bx-next {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+
+            .bx-pager {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                text-align-last: center;
+
+                div {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .fun_slide {
+
+            .bx_s {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 641px;
+
+                .text_box {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 50px 0 0 34px;
+                    box-sizing: border-box;
+
+                }
+            }
+        }
     }
+
+    /* 여기까지 fun_contents */
+
 
     .popular_contents {
         margin-top: 50px;
@@ -319,8 +435,21 @@ main {
 
             li {
                 @include box-style($boxWidth:188px, $boxHeight: 80px);
+                box-shadow: none;
                 background: #fff;
                 display: inline-block;
+                margin-bottom: 8px;
+                margin-right: 2px;
+                transition: 0.2s;
+
+                &:hover {
+                    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+                    background-color: #4d82bf;
+
+                    span {
+                        color: #fff;
+                    }
+                }
 
 
                 a {
@@ -336,6 +465,8 @@ main {
             }
         }
     }
+
+    /*여기까지  popular_contents */
 }
 
 
