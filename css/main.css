@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap");
+/* COMMON */
+.container {
+  width: 1280px;
+  margin: 0 auto; }
+
+/* TYPHOGRAPHY */
+body a,
+body span {
+  /* 기본값 #333333, 15px */
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  color: #333333;
+  font-weight: 400;
+  line-height: 1; }
+
+/* LAYOUT */
+/* HEADER */
+header {
+  height: 140px;
+  padding: 16px 0 26px;
+  background: #898254;
+  position: relative;
+  box-sizing: border-box; }
+  header h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    header h1 a {
+      display: block;
+      background: url(../images/ebs_logo_pc1.png) no-repeat;
+      width: 108px;
+      height: 47px;
+      text-indent: -9999em; }
+  header .top_menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 58px; }
+    header .top_menu ul li {
+      margin-right: 22px;
+      display: inline-block; }
+      header .top_menu ul li:last-child {
+        margin-right: 0; }
+      header .top_menu ul li a {
+        /* 기본값 #333333, 15px */
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 14px;
+        color: #e4e7ed;
+        font-weight: 400;
+        line-height: 1; }
+  header .main_menu {
+    display: flex;
+    justify-content: space-between; }
+    header .main_menu ul li {
+      margin-right: 32px;
+      display: inline-block; }
+      header .main_menu ul li:last-child {
+        margin-right: 0; }
+      header .main_menu ul li a {
+        /* 기본값 #333333, 15px */
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 22px;
+        color: #fff;
+        font-weight: 400;
+        line-height: 1;
+        font-weight: 500; }
+
+/* MAIN */
+main {
+  padding: 32px 0 178px;
+  background: #f2f4f7; }
+  main .on_air a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; }
+    main .on_air a span {
+      font-size: 19px; }
+    main .on_air a span:first-of-type {
+      font-size: 22px;
+      color: red;
+      font-weight: 500; }
+  main form {
+    position: relative;
+    width: 910px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; }
+    main form input {
+      width: 910px;
+      height: 68px;
+      background: #fff;
+      border: 5px solid #4d82bf;
+      box-sizing: border-box; }
+    main form button {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background: url(../images/search_icon.png) no-repeat;
+      border: none;
+      width: 30px;
+      height: 30px; }
+  main .fun_contents,
+  main .popular_contents {
+    float: left; }
+  main .fun_contents ul {
+    margin-top: 50px;
+    width: 863px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; }
+    main .fun_contents ul li {
+      display: inline-block;
+      width: 200px;
+      height: 163px;
+      border-radius: 8px;
+      box-shadow: 1px 9px 16px -9px rgba(0, 0, 0, 0.5);
+      background: #fff;
+      margin-right: 18px;
+      margin-bottom: 13px; }
+      main .fun_contents ul li:nth-child(4n), main .fun_contents ul li:last-child {
+        margin-right: 0; }
+      main .fun_contents ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        text-align: center; }
+    main .fun_contents ul .fun_logo {
+      background: url(../images/ebs_main_spt1.png) no-repeat;
+      margin-bottom: 32px; }
+    main .fun_contents ul li:nth-child(1) a .fun_logo {
+      background-position: 0 -125px;
+      width: 163px;
+      height: 23px; }
+    main .fun_contents ul li:nth-child(1):hover a .fun_logo {
+      background-position: -180px -125px; }
+    main .fun_contents ul li:nth-of-type(2) a .fun_logo {
+      background-position: -147px -24px;
+      width: 112px;
+      height: 31px; }
+    main .fun_contents ul li:nth-child(2):hover a .fun_logo {
+      background-position: -147px -80px; }
+    main .fun_contents ul li:nth-child(3) a .fun_logo {
+      background-position: -273px -24px;
+      width: 136px;
+      height: 42px; }
+    main .fun_contents ul li:nth-child(3):hover a .fun_logo {
+      background-position: -273px -75px; }
+    main .fun_contents ul li:nth-child(4) a .fun_logo {
+      background-position: -427px -24px;
+      width: 145px;
+      height: 39px; }
+    main .fun_contents ul li:nth-child(4):hover a .fun_logo {
+      background-position: -427px -86px; }
+    main .fun_contents ul li:nth-child(5) a .fun_logo {
+      background-position: 0 -163px;
+      width: 103px;
+      height: 53px; }
+    main .fun_contents ul li:nth-child(5):hover a .fun_logo {
+      background-position: 0 -219px; }
+    main .fun_contents ul li:nth-child(6) a .fun_logo {
+      background-position: -180px -176px;
+      width: 125px;
+      height: 39px; }
+    main .fun_contents ul li:nth-child(6):hover a .fun_logo {
+      background-position: -180px -232px; }
+    main .fun_contents ul li:nth-child(7) a .fun_logo {
+      background-position: -345px -176px;
+      width: 84px;
+      height: 40px; }
+    main .fun_contents ul li:nth-child(7):hover a .fun_logo {
+      background-position: -345px -232px; }
+    main .fun_contents ul li:nth-child(8) a .fun_logo {
+      background-position: -490px -171px;
+      width: 70px;
+      height: 42px; }
+    main .fun_contents ul li:nth-child(8):hover a .fun_logo {
+      background-position: -490px -238px; }
+    main .fun_contents ul li:nth-child(9) a .fun_logo {
+      background-position: 0 -315px;
+      width: 103px;
+      height: 43px; }
+    main .fun_contents ul li:nth-child(9):hover a .fun_logo {
+      background-position: 0 -387px; }
+  main .popular_contents {
+    margin-top: 50px; }
+    main .popular_contents ul {
+      width: 390px;
+      margin-left: 25px; }
+      main .popular_contents ul li {
+        width: 188px;
+        height: 80px;
+        border-radius: 8px;
+        box-shadow: 1px 9px 16px -9px rgba(0, 0, 0, 0.5);
+        background: #fff;
+        display: inline-block; }
+        main .popular_contents ul li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto; }
+          main .popular_contents ul li a span {
+            font-size: 17px; }
+
+/* MAIN - FUN_CONTENTS */
+/* MAIN - POPULAR_CONTENTS */
+/* MAIN - FOOTER */
+/* FOOTER */
