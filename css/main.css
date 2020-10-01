@@ -68,10 +68,9 @@ header {
 
 /* MAIN */
 main {
-  padding: 32px 0 178px;
+  padding-top: 32px;
   background: #f2f4f7;
-  /* 여기까지 fun_contents */
-  /*여기까지  popular_contents */ }
+  /*여기까지 main_contents */ }
   main .on_air {
     margin-bottom: 23px; }
     main .on_air a {
@@ -110,55 +109,59 @@ main {
   main .fun_contents,
   main .popular_contents {
     float: left; }
-  main .fun_contents {
-    position: relative;
-    /* 여기까지 fun_contents > ul */ }
-    main .fun_contents ul {
-      margin-top: 50px;
-      width: 863px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end; }
-      main .fun_contents ul li {
-        display: inline-block;
-        width: 200px;
-        height: 163px;
-        border-radius: 8px;
-        box-shadow: 1px 9px 16px -9px rgba(0, 0, 0, 0.5);
-        background: #fff;
-        margin-right: 18px;
-        margin-bottom: 13px;
-        position: relative;
-        overflow: hidden; }
-        main .fun_contents ul li:nth-child(4n), main .fun_contents ul li:last-child {
-          margin-right: 0; }
-      main .fun_contents ul a {
+  main .main_contents {
+    padding-bottom: 178px;
+    /* 여기까지 fun_contents */
+    /* 여기까지 popular_contents */ }
+    main .main_contents .fun_contents {
+      position: relative;
+      /* 여기까지 fun_contents > ul */ }
+      main .main_contents .fun_contents ul {
+        margin-top: 50px;
+        width: 863px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        text-align: center; }
-        main .fun_contents ul a span {
-          z-index: 3;
-          transition: 0.2s; }
-        main .fun_contents ul a:hover span {
-          color: #fff; }
-        main .fun_contents ul a:hover:after {
-          opacity: 1; }
-        main .fun_contents ul a:after {
-          position: absolute;
-          opacity: 0;
-          content: "";
-          top: 0;
-          left: 0;
-          width: 200%;
+        flex-wrap: wrap;
+        justify-content: flex-end; }
+        main .main_contents .fun_contents ul li {
+          display: inline-block;
+          width: 200px;
+          height: 163px;
+          border-radius: 8px;
+          box-shadow: 1px 9px 16px -9px rgba(0, 0, 0, 0.5);
+          background: #fff;
+          margin-right: 18px;
+          margin-bottom: 13px;
+          position: relative;
+          overflow: hidden; }
+          main .main_contents .fun_contents ul li:nth-child(4n), main .main_contents .fun_contents ul li:last-child {
+            margin-right: 0; }
+        main .main_contents .fun_contents ul a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          flex-direction: column;
+          width: 100%;
           height: 100%;
-          background: linear-gradient(-45deg, #8865b8, #8865b8, #3c98c9, #3cc97b, #3cc97b);
-          animation: moveBg 3s ease-in-out infinite;
-          transition: 0.2s; }
+          text-align: center; }
+          main .main_contents .fun_contents ul a span {
+            z-index: 3;
+            transition: 0.2s; }
+          main .main_contents .fun_contents ul a:hover span {
+            color: #fff; }
+          main .main_contents .fun_contents ul a:hover:after {
+            opacity: 1; }
+          main .main_contents .fun_contents ul a:after {
+            position: absolute;
+            opacity: 0;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(-45deg, #8865b8, #8865b8, #3c98c9, #3cc97b, #3cc97b);
+            animation: moveBg 3s ease-in-out infinite;
+            transition: 0.2s; }
 
 @keyframes moveBg {
   0% {
@@ -167,135 +170,242 @@ main {
     transform: translateX(-50%); }
   100% {
     transform: translateX(0); } }
-      main .fun_contents ul .fun_logo {
-        background: url(../images/ebs_main_spt1.png) no-repeat;
-        margin-bottom: 32px;
-        z-index: 3; }
-      main .fun_contents ul li:nth-child(1) a .fun_logo {
-        background-position: 0 -125px;
-        width: 163px;
-        height: 23px; }
-      main .fun_contents ul li:nth-child(1):hover a .fun_logo {
-        background-position: -180px -125px; }
-      main .fun_contents ul li:nth-of-type(2) a .fun_logo {
-        background-position: -147px -24px;
-        width: 112px;
-        height: 31px; }
-      main .fun_contents ul li:nth-child(2):hover a .fun_logo {
-        background-position: -147px -80px; }
-      main .fun_contents ul li:nth-child(3) a .fun_logo {
-        background-position: -273px -24px;
-        width: 136px;
-        height: 42px; }
-      main .fun_contents ul li:nth-child(3):hover a .fun_logo {
-        background-position: -273px -75px; }
-      main .fun_contents ul li:nth-child(4) a .fun_logo {
-        background-position: -427px -24px;
-        width: 145px;
-        height: 39px; }
-      main .fun_contents ul li:nth-child(4):hover a .fun_logo {
-        background-position: -427px -86px; }
-      main .fun_contents ul li:nth-child(5) a .fun_logo {
-        background-position: 0 -163px;
-        width: 103px;
-        height: 53px; }
-      main .fun_contents ul li:nth-child(5):hover a .fun_logo {
-        background-position: 0 -219px; }
-      main .fun_contents ul li:nth-child(6) a .fun_logo {
-        background-position: -180px -176px;
-        width: 125px;
-        height: 39px; }
-      main .fun_contents ul li:nth-child(6):hover a .fun_logo {
-        background-position: -180px -232px; }
-      main .fun_contents ul li:nth-child(7) a .fun_logo {
-        background-position: -345px -176px;
-        width: 88px;
-        height: 40px; }
-      main .fun_contents ul li:nth-child(7):hover a .fun_logo {
-        background-position: -345px -234px; }
-      main .fun_contents ul li:nth-child(8) a .fun_logo {
-        background-position: -490px -171px;
-        width: 70px;
-        height: 42px; }
-      main .fun_contents ul li:nth-child(8):hover a .fun_logo {
-        background-position: -490px -238px; }
-      main .fun_contents ul li:nth-child(9) a .fun_logo {
-        background-position: 0 -315px;
-        width: 103px;
-        height: 43px; }
-      main .fun_contents ul li:nth-child(9):hover a .fun_logo {
-        background-position: 0 -387px; }
-    main .fun_contents .bx-wrapper {
-      max-width: 641px !important;
-      height: 162px !important;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      border-radius: 15px;
-      overflow: hidden; }
-      main .fun_contents .bx-wrapper .bx-controls-direction {
+        main .main_contents .fun_contents ul .fun_logo {
+          background: url(../images/ebs_main_spt1.png) no-repeat;
+          margin-bottom: 32px;
+          z-index: 3; }
+        main .main_contents .fun_contents ul li:nth-child(1) a .fun_logo {
+          background-position: 0 -125px;
+          width: 163px;
+          height: 23px; }
+        main .main_contents .fun_contents ul li:nth-child(1):hover a .fun_logo {
+          background-position: -180px -125px; }
+        main .main_contents .fun_contents ul li:nth-of-type(2) a .fun_logo {
+          background-position: -147px -24px;
+          width: 112px;
+          height: 31px; }
+        main .main_contents .fun_contents ul li:nth-child(2):hover a .fun_logo {
+          background-position: -147px -80px; }
+        main .main_contents .fun_contents ul li:nth-child(3) a .fun_logo {
+          background-position: -273px -24px;
+          width: 136px;
+          height: 42px; }
+        main .main_contents .fun_contents ul li:nth-child(3):hover a .fun_logo {
+          background-position: -273px -75px; }
+        main .main_contents .fun_contents ul li:nth-child(4) a .fun_logo {
+          background-position: -427px -24px;
+          width: 145px;
+          height: 39px; }
+        main .main_contents .fun_contents ul li:nth-child(4):hover a .fun_logo {
+          background-position: -427px -86px; }
+        main .main_contents .fun_contents ul li:nth-child(5) a .fun_logo {
+          background-position: 0 -163px;
+          width: 103px;
+          height: 53px; }
+        main .main_contents .fun_contents ul li:nth-child(5):hover a .fun_logo {
+          background-position: 0 -219px; }
+        main .main_contents .fun_contents ul li:nth-child(6) a .fun_logo {
+          background-position: -180px -176px;
+          width: 125px;
+          height: 39px; }
+        main .main_contents .fun_contents ul li:nth-child(6):hover a .fun_logo {
+          background-position: -180px -232px; }
+        main .main_contents .fun_contents ul li:nth-child(7) a .fun_logo {
+          background-position: -345px -176px;
+          width: 88px;
+          height: 40px; }
+        main .main_contents .fun_contents ul li:nth-child(7):hover a .fun_logo {
+          background-position: -345px -234px; }
+        main .main_contents .fun_contents ul li:nth-child(8) a .fun_logo {
+          background-position: -490px -171px;
+          width: 70px;
+          height: 42px; }
+        main .main_contents .fun_contents ul li:nth-child(8):hover a .fun_logo {
+          background-position: -490px -238px; }
+        main .main_contents .fun_contents ul li:nth-child(9) a .fun_logo {
+          background-position: 0 -315px;
+          width: 103px;
+          height: 43px; }
+        main .main_contents .fun_contents ul li:nth-child(9):hover a .fun_logo {
+          background-position: 0 -387px; }
+      main .main_contents .fun_contents .bx-wrapper:hover .bx-controls-direction {
+        display: block; }
+      main .main_contents .fun_contents .bx-wrapper {
+        max-width: 637px !important;
+        height: 162px !important;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%; }
-        main .fun_contents .bx-wrapper .bx-controls-direction .bx-prev {
-          left: 0; }
-        main .fun_contents .bx-wrapper .bx-controls-direction .bx-next {
+        left: 7px;
+        bottom: 11px;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: pointer; }
+        main .main_contents .fun_contents .bx-wrapper .bx-controls-direction {
           position: absolute;
-          right: 0; }
-      main .fun_contents .bx-wrapper .bx-pager {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        text-align-last: center; }
-        main .fun_contents .bx-wrapper .bx-pager div {
-          display: inline-block; }
-    main .fun_contents .fun_slide .bx_s {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 641px; }
-      main .fun_contents .fun_slide .bx_s .text_box {
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          display: none; }
+          main .main_contents .fun_contents .bx-wrapper .bx-controls-direction a {
+            background: url(../images/btn_arrow_slide.png) no-repeat;
+            width: 44px;
+            height: 44px;
+            display: block;
+            text-indent: -9999em; }
+          main .main_contents .fun_contents .bx-wrapper .bx-controls-direction .bx-prev {
+            left: 0;
+            background-position: 0 0; }
+          main .main_contents .fun_contents .bx-wrapper .bx-controls-direction .bx-prev:hover {
+            background-position: 0 -46px; }
+          main .main_contents .fun_contents .bx-wrapper .bx-controls-direction .bx-next {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-position: -46px 0; }
+          main .main_contents .fun_contents .bx-wrapper .bx-controls-direction .bx-next:hover {
+            background-position: -46px -46px; }
+        main .main_contents .fun_contents .bx-wrapper .bx-pager {
+          position: absolute;
+          left: 0;
+          bottom: 5px;
+          right: 0;
+          text-align-last: center; }
+          main .main_contents .fun_contents .bx-wrapper .bx-pager div {
+            display: inline-block; }
+            main .main_contents .fun_contents .bx-wrapper .bx-pager div .bx-pager-link {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border: 1px solid #a2a2a2;
+              border-radius: 50%;
+              text-indent: -9999em;
+              margin: 0 2px; }
+            main .main_contents .fun_contents .bx-wrapper .bx-pager div .bx-pager-link.active {
+              background: #696969; }
+      main .main_contents .fun_contents .fun_slide .bx_s {
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
         height: 100%;
-        padding: 50px 0 0 34px;
-        box-sizing: border-box; }
-  main .popular_contents {
-    margin-top: 50px; }
-    main .popular_contents ul {
-      width: 390px;
-      margin-left: 25px; }
-      main .popular_contents ul li {
-        width: 188px;
-        height: 80px;
-        border-radius: 8px;
-        box-shadow: 1px 9px 16px -9px rgba(0, 0, 0, 0.5);
-        box-shadow: none;
-        background: #fff;
-        display: inline-block;
-        margin-bottom: 8px;
-        margin-right: 2px;
-        transition: 0.2s; }
-        main .popular_contents ul li:hover {
-          box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
-          background-color: #4d82bf; }
-          main .popular_contents ul li:hover span {
-            color: #fff; }
-        main .popular_contents ul li a {
-          display: block;
+        width: 641px; }
+        main .main_contents .fun_contents .fun_slide .bx_s .text_box {
+          position: absolute;
+          left: 0;
+          top: 0;
           width: 100%;
           height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 0 auto; }
-          main .popular_contents ul li a span {
-            font-size: 17px; }
+          padding: 50px 0 0 34px;
+          box-sizing: border-box; }
+    main .main_contents .popular_contents {
+      margin-top: 50px; }
+      main .main_contents .popular_contents ul {
+        width: 390px;
+        margin-left: 25px; }
+        main .main_contents .popular_contents ul li {
+          width: 188px;
+          height: 80px;
+          border-radius: 8px;
+          box-shadow: 1px 9px 16px -9px rgba(0, 0, 0, 0.5);
+          box-shadow: none;
+          background: #fff;
+          display: inline-block;
+          margin-bottom: 8px;
+          margin-right: 2px;
+          transition: 0.2s; }
+          main .main_contents .popular_contents ul li:hover {
+            box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+            background-color: #4d82bf; }
+            main .main_contents .popular_contents ul li:hover span {
+              color: #fff; }
+          main .main_contents .popular_contents ul li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto; }
+            main .main_contents .popular_contents ul li a span {
+              font-size: 17px; }
+  main .main_footer {
+    background: #e0e0e0;
+    padding: 20px 0;
+    /* 여기까지 .notices */
+    /* 여기까지 socials */ }
+    main .main_footer .container {
+      display: flex;
+      justify-content: space-between; }
+    main .main_footer .notices .notices_menus {
+      width: 320px; }
+      main .main_footer .notices .notices_menus li .notice_tit {
+        font-size: 17px; }
+      main .main_footer .notices .notices_menus li ul {
+        width: 208px; }
+    main .main_footer .socials {
+      width: 410px;
+      display: flex;
+      justify-content: space-between; }
+      main .main_footer .socials .ebs_app {
+        display: block;
+        width: 122px;
+        height: 45px;
+        background: #fff;
+        border-radius: 20px;
+        line-height: 43px;
+        position: relative;
+        padding-left: 27px;
+        box-sizing: border-box; }
+      main .main_footer .socials .ebs_app:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        width: 11px;
+        height: 15px;
+        transform: translateY(-50%);
+        background: url(../images/ebs_main_spt1.png) no-repeat;
+        background-position: -89px 0; }
+      main .main_footer .socials .social_link li {
+        display: inline-block;
+        margin-right: 5px; }
+        main .main_footer .socials .social_link li:last-child {
+          margin-right: 0; }
+        main .main_footer .socials .social_link li a {
+          display: block;
+          background: url(../images/ebs_main_spt1.png) no-repeat;
+          width: 45px;
+          height: 45px;
+          text-indent: -9999em; }
+        main .main_footer .socials .social_link li .blog {
+          background-position: -324px -307px; }
+        main .main_footer .socials .social_link li .blog:hover {
+          background-position: -324px -369px; }
+        main .main_footer .socials .social_link li .facebook {
+          background-position: -380px -307px; }
+        main .main_footer .socials .social_link li .facebook:hover {
+          background-position: -380px -369px; }
+        main .main_footer .socials .social_link li .kakao {
+          background-position: -438px -307px; }
+        main .main_footer .socials .social_link li .kakao:hover {
+          background-position: -438px -369px; }
+        main .main_footer .socials .social_link li .youtube {
+          background-position: -498px -307px; }
+        main .main_footer .socials .social_link li .youtube:hover {
+          background-position: -498px -369px; }
+        main .main_footer .socials .social_link li .insta {
+          background-position: -557px -307px; }
+        main .main_footer .socials .social_link li .insta:hover {
+          background-position: -557px -369px; }
+    main .main_footer .ad_area {
+      width: 272px;
+      height: 190px;
+      background: #6d6d6d;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      margin: 0;
+      font-size: 20px; }
 
 /* MAIN - FUN_CONTENTS */
 /* MAIN - POPULAR_CONTENTS */
