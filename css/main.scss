@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
 
 /* COMMON */
+$mainColor: #4d82bf;
+
 @mixin main-font($fontColor : #333333, $size: 15px) {
     /* 기본값 #333333, 15px */
     font-family: 'Noto Sans KR',
@@ -156,7 +158,7 @@ main {
             width: 910px;
             height: 68px;
             background: #fff;
-            border: 5px solid #4d82bf;
+            border: 5px solid $mainColor;
             box-sizing: border-box;
         }
 
@@ -238,25 +240,31 @@ main {
                         opacity: 0;
                         content: "";
                         top: 0;
-                        left: 0;
+                        left: 0%;
                         width: 200%;
                         height: 100%;
-                        background: linear-gradient(-45deg, #8865b8, #8865b8, #3c98c9, #3cc97b, #3cc97b);
-                        animation: moveBg 3s ease-in-out infinite;
+                        background: linear-gradient(-45deg, #8865b8, #8865b8, #3c98c9, #3cc97b, #3cc97b) top center;
+                        background-size: 180% 180%;
+                        border-radius: 11px;
+                        animation: moveBg 2.5s ease-in-out infinite;
                         transition: 0.2s;
 
 
                         @keyframes moveBg {
                             0% {
-                                transform: translateX(0);
+                                transform: translate(0%);
+
                             }
 
                             50% {
-                                transform: translateX(-50%);
+                                transform: translate(-50%);
+
                             }
 
                             100% {
-                                transform: translateX(0);
+                                transform: translate(0%);
+
+
                             }
 
                         }
@@ -488,7 +496,7 @@ main {
 
                     &:hover {
                         box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
-                        background-color: #4d82bf;
+                        background-color: $mainColor;
 
                         span {
                             color: #fff;
@@ -524,16 +532,64 @@ main {
         }
 
         .notices {
-            .notices_menus {
-                width: 320px;
+            padding-top: 13px;
 
-                li {
+            ul.notices_menus {
+                width: 500px;
+                height: 100%;
+                position: relative;
+
+                >li {
+
                     .notice_tit {
                         font-size: 17px;
+                        color: #777777;
+                        width: 162px;
+                        height: 43px;
+                        line-height: 43px;
+                        text-align: center;
+                        display: block;
+                        border-radius: 20px;
+                        border: 1px solid #d2d1d6;
+                        margin-right: 25px;
+                        margin-bottom: 10px;
                     }
 
-                    ul {
-                        width: 208px;
+                    .notice_tit:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .notice_tit.active {
+                        color: #fff;
+                        background: $mainColor;
+                    }
+
+                    >ul.detail_list.active {
+                        display: block;
+                    }
+
+                    >ul.detail_list {
+                        width: 304px;
+                        height: 100%;
+                        position: absolute;
+                        left: 185px;
+                        top: 0;
+                        display: none;
+
+
+                        li {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+
+                            a {
+                                line-height: 30px;
+                                color: #000;
+                                position: relative;
+                            }
+
+
+                        }
                     }
                 }
             }
@@ -544,6 +600,7 @@ main {
             width: 410px;
             display: flex;
             justify-content: space-between;
+            margin-top: 22px;
 
             .ebs_app {
                 display: block;
@@ -644,7 +701,96 @@ main {
 
     }
 
+    /* 여기까지 main_footer */
 
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+
+    strong {
+        font-weight: bold;
+    }
+
+    .imptt {
+        color: $mainColor;
+    }
+
+    .left_area {
+        width: 840px;
+
+        ul {
+            li:after {
+                content: "";
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                position: absolute;
+                left: -10px;
+                top: 50%;
+                background-color: #777777;
+            }
+
+            li:first-child:after {
+                display: none;
+            }
+
+            li {
+                display: inline-block;
+                margin-right: 20px;
+                position: relative;
+
+                a {
+                    font-weight: 100;
+                    font-size: 12.5px;
+                }
+            }
+        }
+
+        .info {
+            margin: 10px 0;
+
+
+            span {
+                font-weight: 100;
+                font-size: 13px;
+                line-height: 16px;
+            }
+
+        }
+
+        .copy {
+            font-size: 12px;
+        }
+    }
+
+    .right_area {
+        display: flex;
+        justify-content: space-between;
+        width: 340px;
+
+        .ismsp {}
+
+        .links {
+            width: 170px;
+
+            select {
+                width: 150px;
+                height: 18px;
+                margin-bottom: 10px;
+                font-size: 12px;
+            }
+
+            a {
+                float: left;
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 
 
