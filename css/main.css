@@ -643,6 +643,9 @@ footer {
     display: flex; }
   main .main_footer .notices ul.notices_menus li {
     width: 33%; }
+  main .main_footer .notices ul.notices_menus > li .notice_tit.active {
+    color: #000;
+    background: #fff; }
   main .main_footer .notices ul.notices_menus > li .notice_tit {
     color: #fff;
     width: 95%; }
