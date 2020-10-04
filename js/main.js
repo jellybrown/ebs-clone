@@ -11,6 +11,7 @@
 
 
     for (let i = 0; i < noticeTit.length; i++) {
+
         noticeTit[i].addEventListener("click", function (e) {
             e.preventDefault();
             console.log("click");
@@ -31,6 +32,30 @@
 
 
     }
+
+
+
+    const sildeF = document.querySelector(".slide1 img");
+    const sildeS = document.querySelector(".slide2 img");
+    window.addEventListener("resize", function () {
+        const container = document.querySelectorAll(".container");
+        console.log(container[0].clientWidth)
+        if (container[0].clientWidth == 980) {
+
+        }
+
+        /*  window창이 500일때 이미지가 바뀜
+        if (container[0].clientWidth == 980) {
+            sildeF.setAttribute('src', 'images/slide_mini_01.jpg')
+            sildeS.setAttribute('src', 'images/slide_mini_02.png')
+        }
+
+        if (container[0].clientWidth == 1280) {
+            sildeF.setAttribute('src', 'images/slide_img_01.jpg')
+            sildeS.setAttribute('src', 'images/slide_img_02.png')
+        }
+*/
+    })
 
 
 
