@@ -29,3 +29,8 @@
 <img src="https://github.com/jellybrown/ebs-clone/blob/master/ebs-clone.gif" width="750">
 
 <br>
+<br>
+
+<a href="https://jellybrown.github.io/ebs-clone/">구경하러 가기</a>
+
+<br>
